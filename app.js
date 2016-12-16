@@ -273,3 +273,27 @@ app.get('/profile/:name',function(req,res){
   res.render('profile',{person:req.params.name,data:data});
 });
 app.listen(3000);
+
+
+
+
+
+<!Doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
+
+  </head>
+  <body>
+    <%include partials/nav.ejs%>
+      <h1>contact us</h1>
+      <p>
+        thanks for contacting
+      </p>
+      <p>
+        you contacted <%= data.who%> in the <%=data.departement%>in depaitrement
+      </p>
+
+  </body>
+</html>
+
